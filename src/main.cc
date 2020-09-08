@@ -10,7 +10,7 @@ int main()
 
     Hero* hero1{new Hero(5, 3, 1, 2, 3, 1, new std::string[4]{{"fire ball"}, {"fenix tail"}, {"war growl"}, {"fly"}})};
 
-    /*Hero** heroList
+    Hero** heroList
     {
         new Hero*[4]
         {
@@ -19,12 +19,32 @@ int main()
             new Hero(7, 3, 1, 2, 3, 1, new std::string[4]{{"ksdjfhksj"}, {"lml"}, {"loremipsum"}, {"fly2"}}),
             new Hero(2, 3, 1, 2, 3, 1, new std::string[4]{{"fire ball"}, {"ddd"}, {"aaaa"}, {"bbbbb"}})
         }
+    };
+
+    /*int** numbers
+    {
+        new int*[4]
+        {
+            new int(5),
+            new int(4),
+            new int(7),
+            new int(2),
+        }
     };*/
 
-    /*for(int i{}; i < 4; i++)
+    //std::cout << *(*(numbers + 2)) << std::endl;
+
+    for(int i{}; i < 4; i++)
     {
-        std::cout << "Health: " << *(heroList + i)->GetLevel() << std::endl;
-    }*/
+        //std::cout << "Health: " << (*heroList)->GetHealth() << std::endl;
+
+        std::cout << "Hero: " << i + 1 << std::endl;    
+        for(int j{}; j < 4; j++)
+        {
+            std::cout << "Skill: " << *((*(heroList + i))->GetSkills() + j) << std::endl;
+        }
+        std::cout << std::endl;
+    }
 
     //std::cout << "Hero Skills:" << std::endl;
 
