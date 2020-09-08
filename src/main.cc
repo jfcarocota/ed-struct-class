@@ -8,7 +8,7 @@ int main()
     //Heap necesita la palabra new is se hace en la mamoria pero sin tener un limite como el stack
     //El stack se usa cuando creas algo si new directamente en funciones o variables globales.
 
-    Hero* hero1{new Hero(5, 3, 1, 2, 3, 1, new std::string[4]{{"fire ball"}, {"fenix tail"}, {"war growl"}, {"fly"}})};
+    //Hero* hero1{new Hero(5, 3, 1, 2, 3, 1, new std::string[4]{{"fire ball"}, {"fenix tail"}, {"war growl"}, {"fly"}})};
 
     Hero** heroList
     {
@@ -20,19 +20,6 @@ int main()
             new Hero(2, 3, 1, 2, 3, 1, new std::string[4]{{"fire ball"}, {"ddd"}, {"aaaa"}, {"bbbbb"}})
         }
     };
-
-    /*int** numbers
-    {
-        new int*[4]
-        {
-            new int(5),
-            new int(4),
-            new int(7),
-            new int(2),
-        }
-    };*/
-
-    //std::cout << *(*(numbers + 2)) << std::endl;
 
     for(int i{}; i < 4; i++)
     {
